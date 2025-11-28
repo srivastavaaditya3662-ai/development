@@ -1,27 +1,27 @@
 #include <stdio.h>
-struct Student {
+struct Address {
     char city[20];
     int pincode;
 };
-struct Address {
+struct Student {
     int roll;
     char name[20];
-    struct Student addr;   
+    struct Address s;   
 };
 int main() {
-    struct Address s;
+    struct Student stu;
     printf("Enter roll: ");
-    scanf("%d", &s.roll);
+    scanf("%d", &stu.roll);
     printf("Enter name: ");
-    scanf("%s", s.name);
+    scanf("%s", stu.name);
     printf("Enter city: ");
-    scanf("%s", s.addr.city);
+    scanf("%s", stu.s.city);
     printf("Enter pincode: ");
-    scanf("%d", &s.addr.pincode);
+    scanf("%d", &stu.s.pincode);
     printf("\nStudent Info:\n");
-    printf("Roll: %d\n", s.roll);
-    printf("Name: %s\n", s.name);
-    printf("City: %s\n", s.addr.city);
-    printf("Pincode: %d\n", s.addr.pincode);
+    printf("Roll: %d\n", stu.roll);
+    printf("Name: %s\n", stu.name);
+    printf("City: %s\n", stu.s.city);
+    printf("Pincode: %d\n", stu.s.pincode);
     return 0;
 }
